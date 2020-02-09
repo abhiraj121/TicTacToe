@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.random.Random
+import kotlin.random.Random as Random1
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -105,8 +107,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         if (TURN_COUNT == 9) {
             updateDisplay("Game Draw")
         }
-
         checkWinner()
+
     }
 
 
@@ -182,5 +184,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-
+//    private fun autoplay() {
+//        var emptyCell = ArrayList<Int>()
+//        for (i in 1..9) {
+//            if (button1.isEnabled==false){
+//                emptyCell.add(button1.toString().toInt())
+//            }
+//        }
+//        val r = Random()
+//        val randIndex = r.nextInt(emptyCell.size-0)+0
+//        val cellId = emptyCell[randIndex]
+//
+//
+//    }
 }
